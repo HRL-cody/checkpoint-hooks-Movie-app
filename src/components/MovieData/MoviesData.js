@@ -10,21 +10,21 @@ export const MoviesData =[
         title: 'IRON MAN',
         Discription: 'After being held captive in an Afghan cave, billionaire engineer Tony Stark creates a unique weaponized suit of armor to fight evil.',
         Actors: ' Robert Downey Jr. , Gwyneth Paltrow',
-        Rating: 4.42,
+        Rating: 4,
         image : 'https://i.pinimg.com/originals/47/ee/1f/47ee1f625e5b374060eee101cea031d3.jpg'
         },
         {
         title: 'Mr.Robot',
         Discription: 'Elliot, a brilliant but highly unstable young cyber-security engineer and vigilante hacker, becomes a key figure in a complex game of global dominance when he and his shadowy allies try to take down the corrupt corporation he works for.',
         Actors: 'Rami Malek ,  Christian Slater',
-        Rating: 4.11,
+        Rating: 4,
         image: 'https://static.next-episode.net/tv-shows-images/huge/mr.-robot.jpg'
         }, 
         {
         title: 'Yes Man',
         Discription: 'Carl, a lonely man with low self-esteem, participates in a self-help programme that challenges him to say yes to everything in life for an entire year.',
         Actors: 'Jim Carrey , Zooey Deschanel , Bradley Cooper',
-            Rating: 3.5,
+            Rating: 3,
         image: 'https://musicart.xboxlive.com/7/f5680f00-0000-0000-0000-000000000002/504/image.jpg?w=1920&h=1080'
         } ,
         {
