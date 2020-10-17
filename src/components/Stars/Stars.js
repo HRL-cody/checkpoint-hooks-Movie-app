@@ -1,13 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import { FaStar } from "react-icons/fa";
 import "./Stars.css";
 
-const RatingStars = ({Rating, setRating}) => {
+const RatingStars = ({Rating, setRating, filterMovies, movies}) => {
   return (
     <div className="App">
       <span>
         {[...Array(5)].map((Star, i) => {
-          
           const ratingValue = i + 1;
           return (
             <label key={i}>
@@ -15,7 +14,8 @@ const RatingStars = ({Rating, setRating}) => {
                 type="radio"
                 name="rating"
                 value={ratingValue}
-                onClick={() => setRating(ratingValue)}
+                onClick={() => {setRating(ratingValue); filterMovies(movies, ratingValue)}
+                }
               />
               <FaStar
                 className="star"

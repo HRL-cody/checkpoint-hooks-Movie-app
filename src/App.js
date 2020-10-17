@@ -11,12 +11,26 @@ function App() {
 const  [movies, setMovies] = useState(MoviesData)
 const [InputSearch, setInputSearch] = useState('')
 const [rating, setRating] = useState(null);
+const [filteredMovies, setFilteredMovies] = useState(movies)
+const filterMultipleCriteria = (movies, rating, name) => {
+    if(rating !== null) {
+     setFilteredMovies(movies.filter(movie => movie.Rating === rating))
+    }
+    else if(name !== ''){
+        setFilteredMovies(movies.filter(movie =>movie.title.toLowerCase().includes(InputSearch.toLowerCase()) && movie.Rating === rating
+        ))
+    }  
+    else {
+        setFilteredMovies(movies)
+    }
+}
+
   return (
     <div className="App">
-      <RatingStars Rating={rating} setRating={setRating} />
-      <Filter setInputSearch={setInputSearch} rating={rating} />
+      <RatingStars Rating={rating} setRating={setRating} filterMovies={filterMultipleCriteria} movies={movies} />
+      <Filter setInputSearch={setInputSearch}  />
     <MovieList 
-    movies ={movies} InputSearch={InputSearch} rating={rating}
+    movies ={filteredMovies} InputSearch={InputSearch}
     />
     
     <AddMovie  setMovies={setMovies}

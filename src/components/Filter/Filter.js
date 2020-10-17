@@ -3,19 +3,10 @@ import './Filter.css'
 
 
 
-export default function Filter({setInputSearch , rating}) {
+export default function Filter({setInputSearch , setFilteredMovies ,movies}) {
     const handleChange = (e) => { 
     setInputSearch(e.target.value);
-
 };
-// const Rater = ({rate, testRating, filterByRate}) => {
-//     const [value, setValue] = useState (rate)
-//     const handleChange = val => {
-//     setValue(val);
-//     filterByRate(val);
-//     };
-
-
     return (
 
     <div>
